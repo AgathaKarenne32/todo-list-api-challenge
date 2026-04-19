@@ -1,4 +1,4 @@
-import App from "./app";
+/*import App from "./app";
 import { envs } from "./envs";
 import {
   ExampleRoutes
@@ -12,4 +12,13 @@ const app = new App(
   envs.PORT,
 );
 
-app.listen();
+app.listen();*/
+
+import './envs';
+import { app } from './app';
+
+const PORT = process.env.PORT || 3030;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+});

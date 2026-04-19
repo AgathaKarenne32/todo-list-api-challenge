@@ -8,4 +8,4 @@ const authController = new AuthController();
 router.post('/users', (req, res) => authController.register(req, res));
 router.post('/auth/login', (req, res) => authController.login(req, res));
 
-export default router;
+export { router }; 
